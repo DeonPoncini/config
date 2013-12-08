@@ -26,6 +26,7 @@ ActivateAddons Solarized            " colorscheme
 ActivateAddons clang_complete       " clang code complete
 ActivateAddons cmake%600            " cmake syntax highlight
 ActivateAddons Align%294            " column alignment
+ActivateAddons grep                 " searching
 ActivateAddons pathogen             " for plugins VAM doesn't cover
 
 execute pathogen#infect()
