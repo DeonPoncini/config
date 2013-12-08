@@ -1,6 +1,7 @@
 #!/bin/bash
 
 declare -a packages=(
+    apache2
     bison
     build-essential
     bzip2
@@ -10,8 +11,12 @@ declare -a packages=(
     flex
     gcc
     git
+    libapache2-mod-php5
     meld
     mercurial
+    mysql-server
+    php5-mysql
+    phpmyadmin
     subversion
     vim
     )
