@@ -15,6 +15,7 @@ declare -a packages=(
     meld
     mercurial
     mysql-server
+    php-mdb2-driver-mysql
     php5-mysql
     phpmyadmin
     subversion
