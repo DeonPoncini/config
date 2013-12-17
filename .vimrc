@@ -27,6 +27,7 @@ ActivateAddons clang_complete       " clang code complete
 ActivateAddons cmake%600            " cmake syntax highlight
 ActivateAddons Align%294            " column alignment
 ActivateAddons grep                 " searching
+ActivateAddons slang_syntax         " GLSL syntax highlight
 ActivateAddons pathogen             " for plugins VAM doesn't cover
 
 execute pathogen#infect()
@@ -141,3 +142,17 @@ endfunction
 
 nnoremap <leader>q :call <SID>QuickFixToggle()<cr>
 
+command SetGLSLFileType call SetGLSLFileType()
+function SetGLSLFileType()
+  for item in getline(1,10)
+    if item =~ "#version 400"
+      execute ':set filetype=glsl400'
+      break
+    endif
+    if item =~ "#version 330"
+      execute ':set filetype=glsl330'
+      break
+    endif
+  endfor
+endfunction
+au BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl SetGLSLFileType

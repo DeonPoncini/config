@@ -12,12 +12,17 @@ declare -a packages=(
     gcc
     git
     libapache2-mod-php5
+    libglew-dev
     meld
     mercurial
     mysql-server
     php-mdb2-driver-mysql
     php5-mysql
     phpmyadmin
+    qt5-default
+    qtcreator
+    qttools5-dev
+    qttools5-dev-tools
     subversion
     vim
     )
