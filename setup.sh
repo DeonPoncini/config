@@ -19,6 +19,7 @@ declare -a packages=(
     php-mdb2-driver-mysql
     php5-mysql
     phpmyadmin
+    python-dev
     qt5-default
     qtcreator
     qttools5-dev

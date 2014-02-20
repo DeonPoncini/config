@@ -22,8 +22,8 @@ ActivateAddons fugitive             " git integration
 ActivateAddons Conque_Shell         " run bash terminal
 ActivateAddons powerline            " status line
 ActivateAddons FuzzyFinder          " quick file opening
-ActivateAddons Solarized            " colorscheme
-ActivateAddons clang_complete       " clang code complete
+ActivateAddons molokai              " colorscheme
+ActivateAddons YouCompleteMe        " clang code complete
 ActivateAddons cmake%600            " cmake syntax highlight
 ActivateAddons Align%294            " column alignment
 ActivateAddons grep                 " searching
@@ -43,7 +43,7 @@ set hls                 " Highlight search
 set incsearch           " Highlight search as we type
 set lbr                 " Wrap text instead of being on one line
 set background=dark     " dark background
-colorscheme solarized   " Change colorscheme from default
+colorscheme molokai     " Change colorscheme from default
 set t_Co=256            " 256 color terminal
 set cursorline          " Highlight current line
 set laststatus=2        " always show status line
@@ -143,7 +143,7 @@ endfunction
 nnoremap <leader>q :call <SID>QuickFixToggle()<cr>
 
 command SetGLSLFileType call SetGLSLFileType()
-function SetGLSLFileType()
+function! SetGLSLFileType()
   for item in getline(1,10)
     if item =~ "#version 400"
       execute ':set filetype=glsl400'
