@@ -79,6 +79,7 @@ nnoremap <leader>l <C-w>l
 " tag navigation
 noremap <F2>   :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 noremap <F3>   :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+nnoremap <leader>d :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " file browsing
 noremap <F4>   :FufCoverageFile<CR>
 " vimrc quicklinks
@@ -99,8 +100,7 @@ augroup formatters
 augroup END
 
 " setup clang integration
-let g:clang_library_path='/usr/lib/llvm-3.3/lib/'
-let g:clang_user_options='|| exit 0'
+let g:ycm_global_ycm_extra_conf='/home/poncini/config/.ycm_extra_conf.py'
 
 " per language auto comments
 augroup comments
