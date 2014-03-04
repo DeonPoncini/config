@@ -12,7 +12,7 @@ flags = []
 #
 # Most projects will NOT need to set this to anything; you can just change the
 # 'flags' list of compilation flags. Notice that YCM itself uses that approach.
-compilation_database_folder='_build/'
+compilation_database_folder=os.path.expanduser("~") + '/config/'
 
 if compilation_database_folder:
   database = ycm_core.CompilationDatabase( compilation_database_folder )
@@ -97,6 +97,7 @@ def FlagsForFile( filename ):
   # This -x option is necessary in order to compile header files (as C++ files).
   final_flags.append('-x')
   final_flags.append('c++')
+  final_flags.append('-std=c++11')
 
   # On macs, I need this in order to find the system libraries.
   # See: https://github.com/Valloric/YouCompleteMe/issues/303

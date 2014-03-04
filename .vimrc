@@ -100,7 +100,7 @@ augroup formatters
 augroup END
 
 " setup clang integration
-let g:ycm_global_ycm_extra_conf='/home/poncini/config/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf=expand('$HOME', 1) . '/config/.ycm_extra_conf.py'
 
 " per language auto comments
 augroup comments
