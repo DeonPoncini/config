@@ -13,9 +13,11 @@ declare -a packages=(
     git
     libapache2-mod-php5
     libglew-dev
+    libbz2-dev
     meld
     mercurial
     mysql-server
+    openjdk-7-jdk
     php-mdb2-driver-mysql
     php5-mysql
     phpmyadmin

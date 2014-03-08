@@ -52,14 +52,12 @@ echo '    return 0;                           ' >> $PD/src/main.cpp
 echo '}                                       ' >> $PD/src/main.cpp
 echo '                                        ' >> $PD/src/main.cpp
 
-# Generate the .clang_complete file for auto complete
-# path to cc generation python script
-echo 'Generating clang_complete file'
-CCF='/home/deon/.vim/vim-addons/clang_complete/bin/cc_args.py clang++'
+# Generate the compile_commands.json file for auto complete
+echo 'Generating compile_commands.json file'
 pushd $PD/_build
-CXX=$CCF cmake ..
+CXX=cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS="ON"
 make
-cp .clang_complete ../
+cp compile_commands.json $HOME/.ycm/
 popd
 
 # Setup a git repository to track changes

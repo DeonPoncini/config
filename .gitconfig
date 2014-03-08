@@ -1,0 +1,13 @@
+[core]
+	editor = vim
+[user]
+	name = Deon Poncini
+	email = dex1337@gmail.com
+[color]
+	ui = true
+[merge]
+	tool = vimdiff
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
