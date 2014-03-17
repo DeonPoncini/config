@@ -28,6 +28,7 @@ declare -a packages=(
     qttools5-dev-tools
     subversion
     vim
+    vlc
     )
 
 for i in ${packages[@]}
