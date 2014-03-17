@@ -11,6 +11,7 @@ declare -a packages=(
     flex
     gcc
     git
+    gparted
     libapache2-mod-php5
     libglew-dev
     libbz2-dev
