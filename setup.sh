@@ -19,6 +19,7 @@ declare -a packages=(
     libbz2-dev
     meld
     mercurial
+    mesa-utils
     mysql-server
     openjdk-7-jdk
     openssh-server
