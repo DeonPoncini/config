@@ -14,6 +14,7 @@ declare -a packages=(
     git
     gparted
     libapache2-mod-php5
+    libassimp-dev
     libglew-dev
     libglm-dev
     libbz2-dev
