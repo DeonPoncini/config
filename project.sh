@@ -23,7 +23,7 @@ echo '################################        ' >> $PD/CMakeLists.txt
 echo '                                        ' >> $PD/CMakeLists.txt
 echo 'add_definitions(-Wall)                  ' >> $PD/CMakeLists.txt
 echo '                                        ' >> $PD/CMakeLists.txt
-echo 'SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11") ' \
+echo 'set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11") ' \
                                                 >> $PD/CMakeLists.txt
 echo '                                        ' >> $PD/CMakeLists.txt
 echo '################################        ' >> $PD/CMakeLists.txt
