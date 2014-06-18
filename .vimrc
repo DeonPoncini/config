@@ -21,7 +21,6 @@ ActivateAddons The_NERD_tree        " file browser
 ActivateAddons fugitive             " git integration
 ActivateAddons Conque_Shell         " run bash terminal
 ActivateAddons powerline            " status line
-ActivateAddons FuzzyFinder          " quick file opening
 ActivateAddons molokai              " colorscheme
 ActivateAddons YouCompleteMe        " clang code complete
 ActivateAddons cmake%600            " cmake syntax highlight
@@ -29,6 +28,7 @@ ActivateAddons Align%294            " column alignment
 ActivateAddons grep                 " searching
 ActivateAddons slang_syntax         " GLSL syntax highlight
 ActivateAddons pathogen             " for plugins VAM doesn't cover
+ActivateAddons Command-T             " for plugins VAM doesn't cover
 
 execute pathogen#infect()
 
@@ -77,11 +77,7 @@ nnoremap <leader>k <C-w>k
 nnoremap <leader>h <C-w>h
 nnoremap <leader>l <C-w>l
 " tag navigation
-noremap <F2>   :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-noremap <F3>   :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 nnoremap <leader>d :YcmCompleter GoToDefinitionElseDeclaration<CR>
-" file browsing
-noremap <F4>   :FufCoverageFile<CR>
 " vimrc quicklinks
 nnoremap <leader>ev :tabedit $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
