@@ -32,8 +32,9 @@ declare -a packages=(
     qtcreator
     qttools5-dev
     qttools5-dev-tools
+    ruby-dev
     subversion
-    vim
+    vim-nox
     vlc
     xorg-dev
     )
