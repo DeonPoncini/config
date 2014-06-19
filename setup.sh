@@ -11,6 +11,8 @@ declare -a packages=(
     doxygen
     flex
     gcc
+    gimp
+    gimp-dds
     git
     gparted
     libapache2-mod-php5
