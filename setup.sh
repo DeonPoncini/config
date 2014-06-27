@@ -8,6 +8,7 @@ declare -a packages=(
     chromium-browser
     clang
     cmake
+    curl
     doxygen
     flex
     gcc
