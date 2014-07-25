@@ -36,6 +36,7 @@ let mapleader=","       " map leader for bindings
 let maplocalleader="\\" " map local leader
 
 " Setup look and feel
+set relativenumber          " Relative line numbering
 set number                  " Turn on line numbering
 set autoindent              " Indent automatically depending on filetype
 set expandtab               " Replace tabs with spaces
@@ -62,6 +63,8 @@ colorscheme molokai         " Change colorscheme from default
 nnoremap ; :
 inoremap jk         <ESC>
 inoremap kj         <ESC>
+vnoremap jk         <ESC>
+vnoremap kj         <ESC>
 inoremap <ESC>      <NOP>
 nnoremap <Right>    <C-PageDown>
 nnoremap <Left>     <C-PageUp>
@@ -94,8 +97,8 @@ onoremap il{ :<c-u>normal! F}vi{<cr>
 
 " autoremove whitespace
 augroup formatters
-    autocmd!
-    autocmd BufWritePre * :%s/\s\+$//e
+autocmd!
+autocmd BufWritePre * :%s/\s\+$//e
 augroup END
 
 " setup clang integration
@@ -115,28 +118,29 @@ augroup END
 
 " various toggles
 nnoremap <leader>N :set number!<cr>
+nnoremap <leader>b :NERDTreeToggle<cr>
 
 function! s:FoldColumnToggle()
-    if &foldcolumn
-        setlocal foldcolumn=0
-    else
-        setlocal foldcolumn=4
-    endif
+if &foldcolumn
+    setlocal foldcolumn=0
+else
+    setlocal foldcolumn=4
+endif
 endfunction
 
 nnoremap <leader>f :call <SID>FoldColumnToggle()<cr>
 
 let g:vimrc_quickfix_is_open = 0
 function! s:QuickFixToggle()
-    if g:vimrc_quickfix_is_open
-        cclose
-        let g:vimrc_quickfix_is_open = 0
-        execute g:vimrc_quickfix_return_to_window . "wincmd w"
-    else
-        let g:vimrc_quickfix_return_to_window = winnr()
-        copen
-        let g:vimrc_quickfix_is_open = 1
-    endif
+if g:vimrc_quickfix_is_open
+    cclose
+    let g:vimrc_quickfix_is_open = 0
+    execute g:vimrc_quickfix_return_to_window . "wincmd w"
+else
+    let g:vimrc_quickfix_return_to_window = winnr()
+    copen
+    let g:vimrc_quickfix_is_open = 1
+endif
 endfunction
 
 nnoremap <leader>q :call <SID>QuickFixToggle()<cr>
