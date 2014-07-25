@@ -27,32 +27,35 @@ ActivateAddons cmake%600            " cmake syntax highlight
 ActivateAddons Align%294            " column alignment
 ActivateAddons grep                 " searching
 ActivateAddons slang_syntax         " GLSL syntax highlight
+ActivateAddons ctrlp                " file name searching
 ActivateAddons pathogen             " for plugins VAM doesn't cover
-ActivateAddons Command-T             " for plugins VAM doesn't cover
 
 execute pathogen#infect()
 
-" Setup look and feel
-set number              " Turn on line numbering
-set autoindent          " Indent automatically depending on filetype
-set expandtab           " Replace tabs with spaces
-set shiftwidth=4        " tab width of 4
-set tabstop=4           " tab width of 4
-set ic                  " Case insensitive search
-set hls                 " Highlight search
-set incsearch           " Highlight search as we type
-set lbr                 " Wrap text instead of being on one line
-set background=dark     " dark background
-colorscheme molokai     " Change colorscheme from default
-set t_Co=256            " 256 color terminal
-set cursorline          " Highlight current line
-set laststatus=2        " always show status line
-set autowrite           " save when switching buffers
-set encoding=utf-8      " full unicode support
-set colorcolumn=81      " put a line at column 81
-set previewheight=30    " enlarge the preview window
 let mapleader=","       " map leader for bindings
 let maplocalleader="\\" " map local leader
+
+" Setup look and feel
+set number                  " Turn on line numbering
+set autoindent              " Indent automatically depending on filetype
+set expandtab               " Replace tabs with spaces
+set shiftwidth=4            " tab width of 4
+set tabstop=4               " tab width of 4
+set ic                      " Case insensitive search
+set hls                     " Highlight search
+set incsearch               " Highlight search as we type
+set lbr                     " Wrap text instead of being on one line
+set background=dark         " dark background
+set t_Co=256                " 256 color terminal
+set cursorline              " Highlight current line
+set laststatus=2            " always show status line
+set autowrite               " save when switching buffers
+set encoding=utf-8          " full unicode support
+set colorcolumn=81          " put a line at column 81
+set previewheight=30        " enlarge the preview window
+set pastetoggle=<leader>p   " easy toggle paste mode
+
+colorscheme molokai         " Change colorscheme from default
 
 " keybindings
 " utility
