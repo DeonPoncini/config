@@ -1,3 +1,8 @@
 Host sector
     Hostname git.sectorsoftware.net
     User deonp
+
+Host icedawn
+    Hostname icedawn.noip.me
+    User dponcini
+    Port 29418
