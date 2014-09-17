@@ -25,6 +25,7 @@ ActivateAddons molokai              " colorscheme
 ActivateAddons YouCompleteMe        " clang code complete
 ActivateAddons cmake%600            " cmake syntax highlight
 ActivateAddons Align%294            " column alignment
+ActivateAddons haskell%2062         " haskell syntax highlight
 ActivateAddons grep                 " searching
 ActivateAddons slang_syntax         " GLSL syntax highlight
 ActivateAddons ctrlp                " file name searching
