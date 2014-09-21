@@ -12,6 +12,7 @@ declare -a packages=(
     doxygen
     flex
     gcc
+    ghc
     gimp
     gimp-dds
     git
