@@ -26,6 +26,7 @@ declare -a packages=(
     mercurial
     mesa-utils
     mysql-server
+    nfs-common
     openjdk-7-jdk
     openssh-server
     php-mdb2-driver-mysql
