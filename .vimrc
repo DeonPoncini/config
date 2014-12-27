@@ -30,6 +30,7 @@ ActivateAddons grep                 " searching
 ActivateAddons slang_syntax         " GLSL syntax highlight
 ActivateAddons ctrlp                " file name searching
 ActivateAddons EasyMotion           " easy jump to word
+ActivateAddons vim-gradle           " vim gradle syntax
 ActivateAddons pathogen             " for plugins VAM doesn't cover
 
 execute pathogen#infect()
